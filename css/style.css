@@ -1,0 +1,22 @@
+:root {
+    /* Primary Brand Colors */
+    --clr-primary: #8443ff;      /* Main purple */
+    --clr-dark: #121328;         /* Deep navy */
+    --clr-light: #d7d0fa;        /* Soft lavender */
+
+    /* Complementary Colors */
+    --clr-secondary: #ffb347;    /* Warm soft orange for highlights */
+    --clr-neutral: #f5f5ff;      /* Very light background for contrast */
+
+    /* Text Colors */
+    --text-main: #ffffff;
+    --text-dark: #0f0f2e;
+    --text-light: #f7f7ff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Arabic", sans-serif;
+}
