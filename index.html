@@ -24,6 +24,10 @@
         rel="stylesheet" 
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
         crossorigin="anonymous">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <!-- css link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -111,11 +115,48 @@
             </div>
         </div>
 
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center text-center text-lg-end">
+                    <!-- Text Content (Right side in RTL) -->
+                    <div class="col-lg-6 col-md-12 hero-content"  data-aos="fade-up" data-aos-duration="200">
+                        <h1 class="hero-title">نحو  <span>مستقبل رقمي</span> أكثر إبداعاً</h1>
+                        <p class="hero-description"  data-aos="fade-up" data-aos-duration="300">
+                            نحن نقدم حلولاً رقمية مبتكرة تساعد عملك على النمو والازدهار في العصر الرقمي. فريقنا من الخبراء يصمم ويطور حلولاً مخصصة تلبي احتياجاتك الفريدة.
+                        </p>
+                        <a href="#" class="hero-btn"  data-aos="fade-down" data-aos-duration="400">
+                            <i class="fas fa-rocket ms-2"></i>
+                            ابدأ رحلتك الآن
+                        </a>
+                    </div>
+                    
+                    <!-- Image Grid (Left side in RTL) -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="image-grid">
+                            <div class="grid-item grid-item-1"  data-aos="fade-down" data-aos-duration="200">
+                                <img src="imgs/hero-1.jpg" alt="تصميم ويب حديث" class="grid-img">
+                            </div>
+                            <div class="grid-item grid-item-2"  data-aos="fade-up" data-aos-duration="300">
+                                <img src="imgs/hero-2.jpg" alt="تطوير تطبيقات الويب" class="grid-img">
+                            </div>
+                            <div class="grid-item grid-item-3"  data-aos="fade-down" data-aos-duration="400">
+                                <img src="imgs/colleagues.jpg" alt="فريق العمل" class="grid-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <!-- Bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- Loader js -->
     <script src="js/loader.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/aos.js"></script>
 </body>
 </html>
