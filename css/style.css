@@ -46,6 +46,15 @@
     font-weight: 700;
 }
 
+/* -------------------------
+    MIQDAD FONT
+------------------------- */
+@font-face {
+    font-family: 'miqdad';
+    src: url('../fonts/miqdad/miqdad.otf') format('opentype');
+    font-weight: 400;
+}
+
 :root {
     /* Primary Brand Colors */
     --clr-primary: #8443ff;      /* Main purple */
@@ -64,6 +73,7 @@
     /* Fonts */
     --font-safaa: 'Safaa', sans-serif;
     --font-wahran: 'Wahran', sans-serif;
+    --font-miqdad: 'miqdad', sans-serif;
 }
 
 * {
@@ -106,6 +116,7 @@ body {
     box-sizing: border-box;
     animation: rotation 2s linear infinite;
 }
+
 .loader::after {
     content: '';  
     box-sizing: border-box;
@@ -372,8 +383,7 @@ body {
 .hero-description {
     font-size: 1.2rem;
     color: var(--text-dark);
-    max-width: 90%;
-    margin: 1rem auto;
+    margin: 1.2rem auto;
     transform: translateX(30px);
     transition: all 0.8s ease 0.2s;
 }
@@ -427,7 +437,7 @@ body {
     height: 400px;
     margin: auto;
     transform: translateX(-30px);
-    transition: all 0.8s ease 0.6s;
+    transition: all 0.2s ease 0.4s;
 }
 
 .image-grid {
@@ -438,7 +448,7 @@ body {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     background-color: var(--clr-neutral);
     display: flex;
     align-items: center;
@@ -469,7 +479,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 .grid-item:hover .grid-img {
@@ -527,7 +537,6 @@ body {
 .about-section {
     padding: 50px 0;
     background: linear-gradient(135deg, var(--clr-neutral) 0%, #f0edff 100%);
-    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -537,7 +546,7 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(132, 67, 255, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 200px;
+    height: 150px;
     background: linear-gradient(135deg, var(--clr-primary), #a375ff);
     display: flex;
     align-items: center;
@@ -553,12 +562,11 @@ body {
     color: var(--clr-primary);
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 15px;
     display: inline-block;
 }
 
 .main-title {
-    font-family: 'Cairo', sans-serif;
+    font-family: var(--font-wahran);
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--clr-dark);
@@ -567,16 +575,25 @@ body {
 }
 
 .description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-dark);
+    font-family: var(--font-safaa);
+    font-weight: 500;
     margin-bottom: 40px;
     line-height: 1.8;
 }
 
+.description span {
+    color: var(--clr-primary);
+    text-decoration: underline;
+}
+
 .feature-item {
+    padding: 15px;
     margin-bottom: 30px;
     padding-right: 20px;
     border-right: 3px solid var(--clr-primary);
+    background-color: #a375ff18;
     transition: all 0.3s ease;
 }
 
@@ -640,7 +657,7 @@ body {
     }
     
     .image-item {
-        height: 150px;
+        height: 120px;
         font-size: 1rem;
     }
 }
