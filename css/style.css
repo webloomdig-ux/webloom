@@ -1,3 +1,51 @@
+/* -------------------------
+    SAFaa FONT
+------------------------- */
+@font-face {
+    font-family: 'Safaa';
+    src: url('../fonts/safaa/TSSafaa-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Safaa';
+    src: url('../fonts/safaa/TSSafaa-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Safaa';
+    src: url('../fonts/safaa/TSSafaa-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Safaa';
+    src: url('../fonts/safaa/TSSafaa-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+/* -------------------------
+    WAHRAN FONT
+------------------------- */
+@font-face {
+    font-family: 'Wahran';
+    src: url('../fonts/wahran/Wahran-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Wahran';
+    src: url('../fonts/wahran/Wahran-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Wahran';
+    src: url('../fonts/wahran/Wahran-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
 :root {
     /* Primary Brand Colors */
     --clr-primary: #8443ff;      /* Main purple */
@@ -12,11 +60,255 @@
     --text-main: #ffffff;
     --text-dark: #0f0f2e;
     --text-light: #f7f7ff;
+
+    /* Fonts */
+    --font-safaa: 'Safaa', sans-serif;
+    --font-wahran: 'Wahran', sans-serif;
 }
 
-body {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Noto Sans Arabic", sans-serif;
+}
+
+body {
+    font-family: var(--font-wahran);
+    font-weight: 600;
+    background-color: var(--clr-neutral);
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+/* Loader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-dark); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* always on top */
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px dotted var(--clr-primary);
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+}
+.loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px dotted var(--clr-neutral);
+    border-style: solid solid dotted;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: rotationBack 1s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+    @keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+} 
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 10px;
+    transition: all .4s ease;
+}
+
+.navbar-scrolled {
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 900;
+    font-size: 23px;
+    font-family: var(--font-safaa);
+    color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    transition: all .4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-brand:hover {
+    color: var(--clr-primary);
+}
+
+.navbar-brand i {
+    margin-left: 9px;
+}
+
+.navbar-brand:hover::after {
+    width: 60%;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 5px;
+    transition: all .4s ease;
+    position: relative;
+    color: var(--text-dark);
+    padding: 8px 15px !important;
+    border-radius: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--clr-primary) !important;
+    background-color: rgba(146, 74, 194, 0.3);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: var(--clr-primary) !important;
+    font-weight: 600;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    width: 100%;
+    right: 0;
+}
+
+/* Custom Hamburger Button */
+.custom-toggler {
+    border: none;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.custom-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.custom-toggler span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: var(--clr-primary);
+    margin: 3px 0;
+    transition: all .4s ease;
+    border-radius: 2px;
+}
+
+.custom-toggler:hover span {
+    background-color: var(--clr-dark);
+}
+
+.custom-toggler span:nth-child(1) {
+    transform-origin: center;
+}
+
+.custom-toggler span:nth-child(2) {
+    width: 20px;
+    margin-right: auto;
+}
+
+.custom-toggler span:nth-child(3) {
+    transform-origin: center;
+}
+
+.custom-toggler[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.custom-toggler[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+
+.custom-toggler[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Custom Offcanvas */
+.offcanvas-start {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+    width: 280px;
+    backdrop-filter: blur(10px);
+}
+
+.offcanvas.offcanvas-start.showing, 
+.offcanvas.offcanvas-start.show {
+    transform: translateX(0);
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.offcanvas-title {
+    color: var(--clr-primary);
+    font-size: 22px;
+}
+
+.offcanvas-body {
+    padding: 20px;
+}
+
+.offcanvas-body .nav-link {
+    padding: 12px 15px !important;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Mobile backdrop */
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: right;
+    }
 }
