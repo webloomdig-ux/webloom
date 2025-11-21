@@ -102,8 +102,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* always on top */
+    z-index: 9999;
     transition: opacity 0.4s ease;
+    /* Add these to prevent any potential overflow */
+    overflow: hidden;
+    max-width: 100vw;
 }
 
 .loader {
@@ -116,6 +119,8 @@ body {
     position: relative;
     box-sizing: border-box;
     animation: rotation 2s linear infinite;
+    /* Ensure loader stays within bounds */
+    max-width: 100%;
 }
 
 .loader::after {
@@ -341,6 +346,9 @@ body {
     align-items: center;
     padding: 40px 0;
     position: relative;
+    /* ADD THIS to prevent any overflow */
+    overflow: hidden;
+    max-width: 100vw;
 }
 
 .hero-section::before {
@@ -357,6 +365,8 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
+    /* ADD THIS to contain transforms */
+    overflow: hidden;
 }
 
 .hero-title {
@@ -370,12 +380,21 @@ body {
     background-clip: text;
     color: transparent;
     margin: auto;
-    transform: translateX(30px);
-    transition: all 0.8s ease;
+    /* FIX: Remove problematic transform */
+    /* transform: translateX(30px); */
+    opacity: 0; /* Start hidden for animation */
+    animation: slideInFromRight 0.8s ease 0.2s forwards;
 }
 
-.hero-title {
-    transform: translateX(0);
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .hero-title span {
@@ -386,12 +405,10 @@ body {
     font-size: 1.2rem;
     color: var(--text-dark);
     margin: 1.2rem auto;
-    transform: translateX(30px);
-    transition: all 0.8s ease 0.2s;
-}
-
-.hero-description {
-    transform: translateX(0);
+    /* FIX: Remove problematic transform */
+    /* transform: translateX(30px); */
+    opacity: 0; /* Start hidden for animation */
+    animation: slideInFromRight 0.8s ease 0.4s forwards;
 }
 
 .hero-btn {
@@ -408,12 +425,21 @@ body {
     transition: all 0.3s ease;
     border: none;
     margin: auto;
-    transform: translateY(20px);
-    transition: all 0.8s ease 0.4s;
+    /* FIX: Remove problematic transform */
+    /* transform: translateY(20px); */
+    opacity: 0; /* Start hidden for animation */
+    animation: slideInFromBottom 0.8s ease 0.6s forwards;
 }
 
-.hero-btn {
-    transform: translateY(0);
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-btn:hover {
@@ -438,12 +464,11 @@ body {
     gap: 20px;
     height: 400px;
     margin: auto;
-    transform: translateX(-30px);
-    transition: all 0.2s ease 0.4s;
-}
-
-.image-grid {
-    transform: translateX(0);
+    /* FIX: Remove problematic transform */
+    /* transform: translateX(-30px); */
+    /* ADD container constraints */
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .grid-item {
@@ -455,6 +480,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* FIX: Add animation for images */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.1s forwards;
+}
+
+/* Individual delays for grid items */
+.grid-item-1 { animation-delay: 0.1s; }
+.grid-item-2 { animation-delay: 0.2s; }
+.grid-item-3 { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .grid-item:hover {
@@ -541,6 +585,17 @@ body {
     background: linear-gradient(135deg, var(--clr-neutral) 0%, #f0edff 100%);
     display: flex;
     align-items: center;
+    /* ADD THESE to prevent overflow */
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+/* ADD container constraints */
+.container-fluid {
+    max-width: 100%;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .image-item {
@@ -556,7 +611,15 @@ body {
     color: var(--text-light);
     font-weight: 700;
     font-size: 1.2rem;
-    transform: translateY(-5px);
+    /* FIX: Remove problematic transform and use safer animation */
+    transform: translateY(0);
+    box-shadow: 0 8px 25px rgba(132, 67, 255, 0.2);
+    /* ADD container constraint */
+    max-width: 100%;
+}
+
+.image-item:hover {
+    transform: translateY(-5px); /* Only on hover */
     box-shadow: 0 15px 40px rgba(132, 67, 255, 0.25);
 }
 
@@ -574,6 +637,9 @@ body {
     color: var(--clr-dark);
     margin-bottom: 25px;
     line-height: 1.3;
+    /* ADD text overflow protection */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .description {
@@ -583,6 +649,9 @@ body {
     font-weight: 500;
     margin-bottom: 40px;
     line-height: 1.8;
+    /* ADD text overflow protection */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .description span {
@@ -597,6 +666,9 @@ body {
     border-right: 3px solid var(--clr-primary);
     background-color: #a375ff18;
     transition: all 0.3s ease;
+    /* ADD overflow protection */
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .feature-title {
@@ -604,12 +676,18 @@ body {
     font-weight: 700;
     color: var(--clr-primary);
     margin-bottom: 10px;
+    /* ADD overflow protection */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .feature-desc {
     font-size: 1rem;
     color: var(--text-dark);
     opacity: 0.8;
+    /* ADD overflow protection */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .btn-more {
@@ -626,6 +704,9 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    /* ADD overflow protection */
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 .btn-more:hover {
@@ -638,6 +719,11 @@ body {
     font-size: 1.2rem;
 }
 
+/* ADD safe animation classes for AOS */
+[data-aos] {
+    max-width: 100%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 991px) {
     .about-section {
@@ -646,6 +732,27 @@ body {
     
     .main-title {
         font-size: 2.2rem;
+    }
+    
+    /* FIX: Remove problematic margin on mobile */
+    .col-lg-6.ms-lg-5 {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .feature-item {
+        padding: 12px;
+        margin-bottom: 20px;
+        padding-right: 15px;
+    }
+    
+    .image-item {
+        height: 130px;
     }
 }
 
@@ -661,6 +768,26 @@ body {
     .image-item {
         height: 120px;
         font-size: 1rem;
+    }
+    
+    /* FIX: Reduce grid gap on mobile */
+    .row.g-2 {
+        --bs-gutter-x: 0.5rem;
+        --bs-gutter-y: 0.5rem;
+    }
+    
+    .feature-item {
+        padding: 10px;
+        margin-bottom: 15px;
+        padding-right: 12px;
+    }
+    
+    .feature-title {
+        font-size: 1.1rem;
+    }
+    
+    .feature-desc {
+        font-size: 0.9rem;
     }
 }
 
