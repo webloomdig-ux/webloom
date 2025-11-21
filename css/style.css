@@ -156,10 +156,10 @@ body {
 .content {
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.2s ease;
 }
 
-/* Navbar */
+/* Navbar =========================================================================================================================== */
 .navbar {
     box-shadow: 0 2px 15px rgba(146, 74, 194, 0.3);
     padding: 20px 10px;
@@ -332,12 +332,12 @@ body {
     }
 }
 
-/* Hero section */
+/* Hero section ====================================================================================================================== */
 .hero-section {
     min-height: 80vh;
     display: flex;
     align-items: center;
-    padding: 60px 0;
+    padding: 40px 0;
     position: relative;
 }
 
@@ -533,9 +533,9 @@ body {
     }
 }
 
-/* About styles */
+/* About styles ===================================================================================================================== */
 .about-section {
-    padding: 50px 0;
+    padding: 40px 0;
     background: linear-gradient(135deg, var(--clr-neutral) 0%, #f0edff 100%);
     display: flex;
     align-items: center;
@@ -600,7 +600,7 @@ body {
 .feature-title {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--clr-dark);
+    color: var(--clr-primary);
     margin-bottom: 10px;
 }
 
@@ -614,7 +614,7 @@ body {
     background: linear-gradient(135deg, var(--clr-primary), #9d6aff);
     color: var(--text-light);
     border: none;
-    padding: 14px 32px;
+    padding: 12px 28px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
@@ -660,4 +660,58 @@ body {
         height: 120px;
         font-size: 1rem;
     }
+}
+
+/* Services section ================================================================================================================ */
+.services {
+    background-color: var(--clr-dark);
+    padding: 30px 0;
+    color: var(--text-light);
+}
+
+.main-title {
+    position: relative;
+}
+
+.services .main-title::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: -2px;
+    border-radius: 10px;
+    width: 110px;
+    background-color: var(--clr-secondary);
+}
+
+.main-title span {
+    font-style: italic;
+    color: var(--clr-secondary);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.main-title h1 {
+    color: var(--clr-neutral);
+}
+
+.service-card {
+    background-color: #241746;
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+
+.service-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-primary);
+    margin-bottom: 15px;
+}
+
+.service-icon i {
+    font-size: 20px;
 }
