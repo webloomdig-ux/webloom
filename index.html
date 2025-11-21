@@ -151,7 +151,7 @@
 
         <!-- About Us Section -->
         <section class="about-section" id="about">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row align-items-center justify-content-center g-2">
                     <div class="col-12">
                         <div class="row align-items-center">
@@ -330,49 +330,5 @@
     <script src="js/loader.js"></script>
     <!-- Nav close -->
     <script src="js/nav-close.js"></script>
-    <script>
-// Add this temporarily to find the overflowing element
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to find elements wider than viewport
-    function findOverflowingElements() {
-        const viewportWidth = window.innerWidth;
-        const allElements = document.querySelectorAll('*');
-        const overflowing = [];
-        
-        allElements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.right > viewportWidth || rect.left < 0) {
-                overflowing.push({
-                    element: el,
-                    tag: el.tagName,
-                    class: el.className,
-                    width: rect.width,
-                    left: rect.left,
-                    right: rect.right
-                });
-            }
-        });
-        
-        if (overflowing.length > 0) {
-            console.log('OVERFLOWING ELEMENTS FOUND:', overflowing);
-            // Highlight them in red
-            overflowing.forEach(item => {
-                item.element.style.outline = '3px solid red !important';
-                item.element.style.backgroundColor = 'rgba(255,0,0,0.1) !important';
-            });
-        } else {
-            console.log('No overflowing elements found');
-        }
-    }
-    
-    // Run on load and after a short delay
-    setTimeout(findOverflowingElements, 100);
-    setTimeout(findOverflowingElements, 1000);
-    
-    // Also log viewport info
-    console.log('Viewport width:', window.innerWidth);
-    console.log('Document width:', document.documentElement.scrollWidth);
-});
-</script>
 </body>
 </html>
