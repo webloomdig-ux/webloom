@@ -603,12 +603,10 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(132, 67, 255, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 150px;
-    background: linear-gradient(135deg, var(--clr-primary), #a375ff);
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-light);
     font-weight: 700;
     font-size: 1.2rem;
     /* FIX: Remove problematic transform and use safer animation */
