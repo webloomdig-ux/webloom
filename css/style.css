@@ -748,3 +748,13 @@ body {
 .service-card:hover .desc {
     color: var(--clr-secondary);
 }
+
+@media (max-width: 768px) {
+    .service-card {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
