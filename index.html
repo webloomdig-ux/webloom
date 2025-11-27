@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Webloom – واجهتك الرقمية بأعلى جودة وتجربة مستخدم</title>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?
+        family=Tajawal:wght@300;400;500;700& 
+        family=Almarai:wght@300;400;700;800& 
+        family=Noto+Sans+Arabic:wght@400;700& 
+        family=Mada:wght@200;400;600& 
+        family=Cairo:wght@300;400;700&display=swap" 
+        rel="stylesheet">
+
+    <!-- font awesom -->
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+        crossorigin="anonymous">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" dir="rtl">
+            <div class="container w-100 d-flex justify-content-between align-items-center">
+                
+                <!-- Brand/Logo (START) -->
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-brands fa-webflow"></i>
+                    ويبلووم
+                </a>
+
+                <!-- Custom Hamburger (for mobile) -->
+                <button class="custom-toggler navbar-toggler d-lg-none" 
+                        type="button" 
+                        data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasNavbar" 
+                        aria-controls="offcanvasNavbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Links (END) -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">الصفحة الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">مشاريعنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        
+        <!-- Offcanvas Menu for Mobile -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-backdrop="true" data-bs-scroll="true">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+                    <i class="fa-brands fa-webflow"></i>
+                    ويبلووم
+                </h5>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" data-bs-dismiss="offcanvas">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-bs-dismiss="offcanvas">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" data-bs-dismiss="offcanvas">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-bs-dismiss="offcanvas">مشاريعنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-bs-dismiss="offcanvas">اتصل بنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="row align-items-center text-center text-lg-end">
+                    <!-- Text Content (Right side in RTL) -->
+                    <div class="col-lg-6 col-md-12 hero-content"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <h1 class="hero-title">نحو  <span>مستقبل رقمي</span> أكثر إبداعاً</h1>
+                        <p class="hero-description text-lg-end"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                            نحن نقدم حلولاً رقمية مبتكرة تساعد عملك على النمو والازدهار في العصر الرقمي. فريقنا من الخبراء يصمم ويطور حلولاً مخصصة تلبي احتياجاتك الفريدة.
+                        </p>
+                        <a href="#" class="hero-btn"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                            <i class="fas fa-rocket ms-2"></i>
+                            ابدأ رحلتك الآن
+                        </a>
+                    </div>
+                    
+                    <!-- Image Grid (Left side in RTL) -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="image-grid">
+                            <div class="grid-item grid-item-1"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                                <img src="imgs/hero-1.jpg" alt="تصميم ويب حديث" class="grid-img">
+                            </div>
+                            <div class="grid-item grid-item-2"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                                <img src="imgs/hero-2.jpg" alt="تطوير تطبيقات الويب" class="grid-img">
+                            </div>
+                            <div class="grid-item grid-item-3"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                                <img src="imgs/colleagues.jpg" alt="فريق العمل" class="grid-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="row align-items-center justify-content-center g-2">
+                    <div class="col-12">
+                        <div class="row align-items-center">
+                            <!-- Text Content (Right Side) -->
+                            <div class="col-lg-6 mb-4 text-center text-lg-end ms-lg-5">
+                                <span class="subtitle" data-aos="fade-in" data-aos-duration="800">نبذة عنا</span>
+                                <h1 class="main-title" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">من نحن</h1>
+                                <p class="description" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
+                                    نحن في <span>ويبلووم</span> نؤمن بأن التصميم القوي والتجربة السلسة هما أساس أي حضور رقمي ناجح. نعمل على تقديم حلول مبتكرة، مدروسة، وذات جودة عالية تساعد العلامات التجارية على النمو، الظهور بقوة، والوصول إلى جمهورها بفعالية.
+                                </p>
+                                
+                                <!-- Features Grid -->
+                                <div class="row g-3">
+                                    <div class="col-6" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
+                                        <div class="feature-item">
+                                            <h3 class="feature-title">من نحن</h3>
+                                            <p class="feature-desc">رؤية واضحة لبناء حضور رقمي متميز لعملائنا.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
+                                        <div class="feature-item">
+                                            <h3 class="feature-title">ماذا نقدم</h3>
+                                            <p class="feature-desc">خدمات تطوير وتصميم مبتكرة تلائم احتياجاتك.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6" data-aos="fade-in" data-aos-duration="800" data-aos-delay="500">
+                                        <div class="feature-item">
+                                            <h3 class="feature-title">كيف نساعد</h3>
+                                            <p class="feature-desc">نرافقك في كل مرحلة لضمان أفضل النتائج.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6" data-aos="fade-in" data-aos-duration="800" data-aos-delay="600">
+                                        <div class="feature-item">
+                                            <h3 class="feature-title">قصص نجاح</h3>
+                                            <p class="feature-desc">إنجازات حقيقية تبرز قيمة ما نقدمه.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4" data-aos="fade-in" data-aos-duration="800" data-aos-delay="700">
+                                    <button class="btn-more">تعرف علينا أكثر</button>
+                                </div>
+                            </div>
+                            <!-- Image Grid (Left Side) -->
+                            <div class="col-lg-5 mb-5">
+                                <div class="row g-2">
+                                    <div class="col-6" data-aos="fade-up" data-aos-duration="800">
+                                        <div class="image-item">
+                                            <img src="imgs/coding-1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
+                                        <div class="image-item">
+                                            <img src="imgs/coding-2.jpg" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                                        <div class="image-item">
+                                            <img src="imgs/coding-3.jpg" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6" data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">
+                                        <div class="image-item">
+                                            <img src="imgs/hero-1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services section -->
+        <section class="services" id="services">
+            <div class="main-title text-center">
+                <span>الخدمات التي نقدم</span>
+                <h1>خدماتنا</h1>
+            </div>
+            <div class="services-content mt-5">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center g-3">
+                        <!-- Service card -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-down" data-aos-duration="300" data-aos-delay="100">
+                            <div class="service-card text-center text-lg-end">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+                                <h3>تصميم صفحات هبوط</h3>
+                                <p class="desc">
+                                    نصمّم صفحات هبوط عالية التحويل تساعدك على جذب العملاء وتحقيق أفضل النتائج.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Service card -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <h3>موقع ويب تجاري</h3>
+                                <p class="desc">
+                                    ننشئ مواقع احترافية تناسب الشركات وتبرز هويتك المهنية وتسهّل تواصل العملاء معك.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Service card -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-duration="400" data-aos-delay="300">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                                <h3>موقع تجارة إلكترونية</h3>
+                                <p class="desc">
+                                    نصمّم متاجر إلكترونية متكاملة مع أنظمة دفع آمنة وتجربة شراء سهلة.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Service card -->
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="400">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-palette"></i>
+                                </div>
+                                <h3>الهوية البصرية</h3>
+                                <p class="desc">
+                                    نبتكر هوية بصرية متناسقة تعكس شخصية علامتك التجارية وتمنحك حضوراً قوياً.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Service card -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-down" data-aos-duration="500" data-aos-delay="500">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-rotate"></i>
+                                </div>
+                                <h3>إعادة تصميم موقع</h3>
+                                <p class="desc">
+                                    نقوم بتجديد موقعك بالكامل ليصبح أسرع، أجمل، وأكثر فعالية لتحقيق أهدافك.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Service card -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <h3>الصيانة والدعم</h3>
+                                <p class="desc">
+                                    نوفر صيانة مستمرة ودعماً فنياً لضمان أداء موقعك بدون مشاكل.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section class="projects" id="projects">
+            <div class="container projects-header">
+                <div class="d-flex justify-content-between align-items-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <div class="projects-title">
+                        <span>معرض الأعمال</span>
+                        <h1>أعمالنا</h1>
+                    </div>
+                    <div class="projects-more">
+                        <a href="#" class="hero-btn">عرض المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container projects-body mt-4">
+                <div class="row justify-content-center align-items-center g-3">
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-down" data-aos-duration="500" data-aos-delay="300">
+                        <div class="project-card">
+                            <img src="imgs/mockups/ainess-mockup.png" alt="Website Mockup" class="project-img">
+                            <div class="project-content text-center text-lg-end">
+                                <span class="project-badge">صفحة هبوط</span>
+                                <h3 class="project-title">صفحة هبوط لمقهى Ainess</h3>
+                                <p class="project-description">
+                                    تصميم صفحة هبوط أنيقة تُبرز أجواء الكافيه، القائمة، والخدمات بطريقة جذّابة تُحفّز الزوار على الزيارة.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/Ainess/" class="project-link">
+                                    تصفح الموقع
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">
+                        <div class="project-card">
+                            <img src="imgs/mockups/drSounny-mockup.png" alt="Website Mockup" class="project-img">
+                            <div class="project-content text-center text-lg-end">
+                                <span class="project-badge">صفحة هبوط</span>
+                                <h3 class="project-title">صفحة هبوط لعيادة د. سوني لطب العيون</h3>
+                                <p class="project-description">
+                                    تصميم هادئ وواثق يعرض خدمات فحص العيون، موعد الحجز، وخبرة الطبيب بطريقة تبعث الطمأنينة لدى المريض.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/opthCenter/" class="project-link">
+                                    تصفح الموقع
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                        <div class="project-card">
+                            <img src="imgs/mockups/foody-mockup.png" alt="Website Mockup" class="project-img">
+                            <div class="project-content text-center text-lg-end">
+                                <span class="project-badge">صفحة هبوط</span>
+                                <h3 class="project-title">صفحة هبوط لمطعم Foody</h3>
+                                <p class="project-description">
+                                    تجربة عرض شهية تُظهر قائمة الأطباق، العروض، ووسائل التواصل بطريقة تجعل الزائر يشعر بجوع لطيف ورغبة في الطلب فورًا.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/wallaFood/" class="project-link">
+                                    تصفح الموقع
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
+                        <div class="project-card">
+                            <img src="imgs/mockups/hpm-mockup.png" alt="Website Mockup" class="project-img">
+                            <div class="project-content text-center text-lg-end">
+                                <span class="project-badge">صفحة هبوط</span>
+                                <h3 class="project-title">صفحة هبوط لمركز HPM للتكوين</h3>
+                                <p class="project-description">
+                                    صفحة تعليمية واضحة تُبرز الدورات، الأهداف، وطرق التسجيل مع تجربة احترافية تُلائم المؤسسات التعليمية.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/hpmCenter/" class="project-link">
+                                    تصفح الموقع
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-down" data-aos-duration="500" data-aos-delay="700">
+                        <div class="project-card">
+                            <img src="imgs/mockups/picksouk-mockup.png" alt="Website Mockup" class="project-img">
+                            <div class="project-content text-center text-lg-end">
+                                <span class="project-badge">موقع تجاري</span>
+                                <h3 class="project-title">موقع حديث للتجارة الالكترونية لpicksouk</h3>
+                                <p class="project-description">
+                                    واجهة بيع حديثة وسريعة تُبرز المنتجات وطريقة الدفع عند الاستلام، مع تجربة واضحة تُسهّل على الزائر اختيار المنتج وإتمام الطلب بثقة. و تبرز جميع تصنيقات المنتجات بطريقة جذابة وسلسة.
+                                </p>
+                                <a href="https://picksouk.com/" class="project-link">
+                                    تصفح الموقع
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">
+                        <div class="project-card">
+                            <img src="imgs/mockups/optiline-mockup.png" alt="Website Mockup" class="project-img">
+                            <div class="project-content text-center text-lg-end">
+                                <span class="project-badge">صفحة هبوط</span>
+                                <h3 class="project-title">صفحة هبوط لمتجر Optiline للبصريات</h3>
+                                <p class="project-description">
+                                    واجهة احترافية تعرض النظارات والخدمات البصرية مع تجربة استخدام سهلة تساعد الزائر على اختيار المنتج المناسب بسرعة.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/optiline/" class="project-link">
+                                    تصفح الموقع
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+    <!-- Loader js -->
+    <script src="js/loader.js"></script>
+    <!-- Nav close -->
+    <script src="js/nav-close.js"></script>
+</body>
+</html>
